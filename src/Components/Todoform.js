@@ -2,7 +2,8 @@ import './Todoform.css';
 import { useState } from 'react';
 
 const Todoform=()=>{
-    const [text,setText]=useState("");
+    const[text,setText]=useState("");
+
 
     const onFormSubmit=()=>{
         
@@ -14,9 +15,8 @@ const Todoform=()=>{
 
     return(
         <div>
-            <form className="form">
+            <form className="form" onSubmit={onFormSubmit}>
                 <input type="text" placeholder='Enter a new todo...' 
-                onSubmit={onFormSubmit}
                 onChange={onInputChange}/>
                 
             </form>
